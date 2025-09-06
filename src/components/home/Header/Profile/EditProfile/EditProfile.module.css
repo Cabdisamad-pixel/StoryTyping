@@ -1,0 +1,58 @@
+.EditContainer{
+    width: 40rem;
+    height: 11.8rem;
+    position: fixed;
+    background-color: rgb(56, 56, 179);
+    top: 17rem;
+    right: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0.6rem;
+    gap: 16px;
+    border-radius: 0.3rem;
+}
+.EditContainer label{
+    font-size: 1.3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ccc;
+}
+.EditContainer input{
+    width: 28rem;
+    height: 3.4rem;
+    border: 2px solid #ccc;
+    border-radius: 0.5rem;
+    outline: none;
+    font-size: 1.2rem;
+    padding: 0.3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.EditContainer button{
+    width: 19rem;
+    height: 2.55rem;
+    font-size: 1.2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: navy;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+}
+.EditContainer button:disabled{
+    background-color: #ccc;
+    color: black;
+}
+.EditContainer p{
+    color: red;
+    font-size: 1.3rem;
+    font-weight: 550;
+    letter-spacing: 1px;
+}
+
+.BackDrop{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #05050589;
+}
