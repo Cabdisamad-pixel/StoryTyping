@@ -1,0 +1,23 @@
+.PerformingContainer {
+    width: 100%;
+    height: auto;
+    /* min-height: 200rem; */
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1.3rem;
+    flex-wrap: wrap;
+    padding: 3rem;
+    padding-left: 3.2rem;
+}
+
+.TextContainer {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    color: #333;
+    width: 26rem;
+    height: 12rem;
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+    font-size: 1.1rem;
+}

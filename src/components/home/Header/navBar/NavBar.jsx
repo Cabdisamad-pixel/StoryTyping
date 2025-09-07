@@ -15,7 +15,7 @@ const ctx = useContext(AuthContex);
                 <li>about</li>
                 <li>main</li>
                 <li>center</li>
-                <li><button onClick={() => ctx.AuthChangeHandler()}>LogOut</button></li>
+                <button onClick={() => ctx.AuthChangeHandler()}>LogOut</button>
             </ul>
         </>
     )

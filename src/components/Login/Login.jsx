@@ -2,6 +2,7 @@ import { useContext, useState } from 'react'
 import useInput from '../../Hooks/useInput'
 import LoginStyle from './Login.module.css'
 import AuthContex from '../../store/Auth/AuthStore'
+import UserContext from '../../store/UserData/UserContext'
 
 
 const Login = () => {
@@ -9,6 +10,7 @@ const Login = () => {
     const [oldUser, setOldUser] = useState(true);
 
     const ctx = useContext(AuthContex);
+    const UsersCtx = useContext(UserContext);
 
     const { name: email, isValid: emailValid, inputHandler: emailHandler, BlurHandler: emailBlur, ResetInput: emailReset, invalid: emailInvalid } = useInput((input) => input.includes('@'))
 
@@ -95,8 +97,12 @@ const Login = () => {
                 emailReset();
                 passwordReset();
                 fullNameReset();
+                const NewUserData = {
+                    id : ctx.users.length + 1,
+                    typingData : []
+                }
+                UsersCtx.UpdateData([...UsersCtx.Data,NewUserData])
                 ctx.AuthChangeHandler();
-
                 console.log(newUser);
             }
 

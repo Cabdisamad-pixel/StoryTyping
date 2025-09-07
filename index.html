@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typing App</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: #fff;
+    }
+
+    /* Navbar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 15px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffeb3b;
+    }
+
+    .profile {
+      background: #fff;
+      color: #333;
+      padding: 8px 15px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+    }
+
+    .profile i {
+      margin-right: 8px;
+    }
+
+    /* Posts Grid */
+    .container {
+      padding: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.9);
+      color: #333;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    /* Post Box */
+    .post-box {
+      grid-column: span 2;
+      background: rgba(0,0,0,0.2);
+      padding: 20px;
+      border-radius: 15px;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      resize: none;
+      font-size: 14px;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      background: #ffeb3b;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #ffc107;
+    }
+
+    /* Modal Edit */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background: #fff;
+      color: #333;
+      padding: 30px;
+      border-radius: 15px;
+      width: 400px;
+      text-align: center;
+    }
+
+    .modal-content input {
+      width: 90%;
+      padding: 10px;
+      margin-top: 15px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+
+    .modal-content button {
+      background: #2575fc;
+      color: #fff;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <h2>Typing...</h2>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Main</a></li>
+      <li><a href="#">Center</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+    <div class="profile"><i>👤</i> Eng-Pixel</div>
+  </nav>
+
+  <!-- Posts -->
+  <div class="container">
+    <div class="card">Cabdisamad waa arday dhigta jaamacada Jamhuuriya University</div>
+    <div class="card">Sidoo kale waxaan ahay Eng Pixel oo jecel coding iyo design</div>
+    <div class="card">Post kale oo muujinaya xog cusub</div>
+    <div class="card">Content test ah...</div>
+
+    <!-- Post Box -->
+    <div class="post-box">
+      <textarea rows="3" placeholder="Type something..."></textarea>
+      <button>Post</button>
+    </div>
+  </div>
+
+  <!-- Modal Edit -->
+  <div class="modal" id="editModal">
+    <div class="modal-content">
+      <h3>Edit Profile</h3>
+      <input type="text" placeholder="Enter new name">
+      <button>Edit</button>
+    </div>
+  </div>
+
+</body>
+</html>

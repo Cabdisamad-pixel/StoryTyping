@@ -1,0 +1,64 @@
+.FormControll {
+    width: 100%;
+    height: 20rem;
+    /* background-color: aqua; */
+    position: sticky;
+    bottom: 0px;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    padding: 1.4rem;
+
+
+}
+
+form {
+    background-color:rgba(0,0,0,0.2);
+    backdrop-filter: blur(8px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 15px; 
+    padding: 3rem;
+    border-radius: 0.7rem;
+}
+
+form textarea{
+    
+    width: 100%;
+    height: 9rem;
+    resize: none;
+    outline: none;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 1.9px;
+}
+
+form button {
+   
+    width: 10rem;
+    height: 3.4rem;
+    font-size: 1.3rem;
+    background-color: #ffeb3b;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    outline: none;
+    border: none;
+    border-radius: 0.6rem;
+    cursor: pointer;
+}
+
+form button:disabled {
+    cursor: not-allowed;
+    color: #ccc;
+}
+form button:hover{
+    background-color: #ffc107;
+}
